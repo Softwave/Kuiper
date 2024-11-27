@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://yx2uvxo4off1"]
+
+[ext_resource type="Texture2D" uid="uid://4mtvw347wixq" path="res://themes/RetroTheme/button/Button_Blue_MoreDepth.png" id="1_aepi2"]
+
+[resource]
+texture = ExtResource("1_aepi2")
+texture_margin_left = 20.0
+texture_margin_top = 8.0
+texture_margin_right = 20.0
+texture_margin_bottom = 8.0
+expand_margin_bottom = 5.0

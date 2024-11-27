@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cpgt2a27frs26"
+path="res://.godot/imported/cozette.fnt-20ce3a4742b7b63a7809793cdfdf56aa.fontdata"
+
+[deps]
+
+source_file="res://themes/RetroTheme/fonts/cozette.fnt"
+dest_files=["res://.godot/imported/cozette.fnt-20ce3a4742b7b63a7809793cdfdf56aa.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

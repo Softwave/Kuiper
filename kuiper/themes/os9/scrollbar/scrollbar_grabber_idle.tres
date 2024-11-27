@@ -1,0 +1,19 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://tfkyklrlqm8x"]
+
+[ext_resource type="Texture2D" uid="uid://cs32pqa2pr23h" path="res://themes/RetroTheme/slider/Slider_Blue_Grabber.png" id="1_asmbs"]
+
+[resource]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("1_asmbs")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+expand_margin_left = 5.0
+expand_margin_top = 6.0
+expand_margin_bottom = 13.0
+axis_stretch_horizontal = 1
+modulate_color = Color(0.792157, 0.815686, 0.894118, 1)
