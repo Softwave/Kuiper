@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://bddjgmb22q2vx" path="res://themes/RetroTheme/RetroTheme.tres" id="1_h37q1"]
 [ext_resource type="StyleBox" uid="uid://yx2uvxo4off1" path="res://themes/os9/mainmenu/mainmenu.tres" id="2_bq6ts"]
+[ext_resource type="Script" path="res://scripts/text_editor.gd" id="2_otcw6"]
 [ext_resource type="Texture2D" uid="uid://dgwt7q0ivgah" path="res://themes/RetroTheme/textedit/TextBoxIdleBlack.png" id="2_ul73e"]
-[ext_resource type="Script" path="res://scenes/text_editor.gd" id="2_wbh14"]
-[ext_resource type="FontFile" uid="uid://bfcvs6jxewk7x" path="res://themes/RetroTheme/fonts/pico-8.ttf" id="3_cgbr7"]
 [ext_resource type="Script" path="res://scripts/code_edit.gd" id="3_uewk0"]
+[ext_resource type="FontFile" uid="uid://bowouxapjhipp" path="res://themes/RetroTheme/fonts/PICO-8.ttf" id="4_5hpkv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr88o"]
 texture = ExtResource("2_ul73e")
@@ -28,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_h37q1")
-script = ExtResource("2_wbh14")
+script = ExtResource("2_otcw6")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -59,9 +59,10 @@ theme_override_constants/margin_right = 20
 [node name="Clock" type="Label" parent="Panel/MainMenu/MarginContainer2"]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_cgbr7")
-theme_override_font_sizes/font_size = 32
-text = "10:39
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5hpkv")
+theme_override_font_sizes/font_size = 16
+text = "9:21
 "
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -265,14 +266,8 @@ auto_brace_completion_enabled = true
 auto_brace_completion_highlight_matching = true
 script = ExtResource("3_uewk0")
 
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
-title = "ABOUT"
-position = Vector2i(0, 36)
-size = Vector2i(319, 233)
-force_native = true
-dialog_text = "Kuiper -- little text editor
-
-By Serene Leyba, (C) 2024"
+[node name="FileDialog" type="FileDialog" parent="."]
+use_native_dialog = true
 
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/File" to="." method="_on_file_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Edit" to="." method="_on_edit_id_pressed"]
