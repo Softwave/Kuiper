@@ -68,3 +68,13 @@ func _on_edit_id_pressed(id:int):
 	if id == 5: # Redo
 		$Panel/CodeEdit.redo()
 	
+func _on_help_id_pressed(id:int):
+	$AboutWindow.visible = true 
+
+
+func _on_quit_about_button_pressed() -> void:
+	$AboutWindow.visible = false 
+
+
+func _on_about_window_close_requested() -> void:
+	$AboutWindow.visible = false 

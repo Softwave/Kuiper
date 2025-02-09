@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://calsanliwqsh3"]
+[gd_scene load_steps=10 format=3 uid="uid://calsanliwqsh3"]
 
 [ext_resource type="Theme" uid="uid://bddjgmb22q2vx" path="res://themes/RetroTheme/RetroTheme.tres" id="1_h37q1"]
 [ext_resource type="StyleBox" uid="uid://yx2uvxo4off1" path="res://themes/os9/mainmenu/mainmenu.tres" id="2_bq6ts"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgwt7q0ivgah" path="res://themes/RetroTheme/textedit/TextBoxIdleBlack.png" id="2_ul73e"]
 [ext_resource type="Script" path="res://scripts/code_edit.gd" id="3_uewk0"]
 [ext_resource type="FontFile" uid="uid://bowouxapjhipp" path="res://themes/RetroTheme/fonts/PICO-8.ttf" id="4_5hpkv"]
+[ext_resource type="FontFile" uid="uid://dr55g16lp7ag8" path="res://themes/RetroTheme/fonts/PixeloidMono.ttf" id="7_ugnit"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr88o"]
 texture = ExtResource("2_ul73e")
@@ -149,6 +150,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.662745, 0.647059, 0.666667, 1)
 theme_override_colors/selection_color = Color(0.713726, 0.505882, 0.752941, 1)
 theme_override_colors/caret_color = Color(0.662745, 0.647059, 0.666667, 1)
+theme_override_constants/line_spacing = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_yr88o")
 theme_override_colors/line_number_color = Color(0.662745, 0.647059, 0.666667, 1)
 theme_override_colors/code_folding_color = Color(1, 0.843137, 0, 1)
@@ -262,8 +264,62 @@ auto_brace_completion_highlight_matching = true
 script = ExtResource("3_uewk0")
 
 [node name="FileDialog" type="FileDialog" parent="."]
+size = Vector2i(348, 215)
 use_native_dialog = true
+
+[node name="AboutWindow" type="Window" parent="."]
+title = "About Kuiper"
+initial_position = 1
+size = Vector2i(324, 206)
+theme = ExtResource("1_h37q1")
+
+[node name="AboutPanel" type="Panel" parent="AboutWindow"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -0.285004
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h37q1")
+
+[node name="Label" type="Label" parent="AboutWindow/AboutPanel"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.5
+offset_top = 12.0
+offset_right = 64.5
+offset_bottom = 32.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_ugnit")
+text = "KUIPER"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="AboutWindow/AboutPanel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 270.0
+offset_bottom = 93.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_ugnit")
+theme_override_font_sizes/font_size = 12
+text = "Kuiper is a simple code editor I wrote 
+chiefly to be aesthetically pleasing, &
+so good for my personal projects and 
+streaming.
+
+
+
+
+Version 0.9
+Copyright 2025, Serene Leyba
+https://softwave.itch.io/
+"
 
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/File" to="." method="_on_file_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Edit" to="." method="_on_edit_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Help" to="." method="_on_help_id_pressed"]
+[connection signal="close_requested" from="AboutWindow" to="." method="_on_about_window_close_requested"]

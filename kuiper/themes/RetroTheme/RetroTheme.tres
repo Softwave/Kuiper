@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=54 format=3 uid="uid://bddjgmb22q2vx"]
+[gd_resource type="Theme" load_steps=55 format=3 uid="uid://bddjgmb22q2vx"]
 
 [ext_resource type="FontFile" uid="uid://crpg4pfsmatt6" path="res://themes/RetroTheme/fonts/ProggyClean.ttf" id="1_m7g1y"]
 [ext_resource type="Texture2D" uid="uid://bxmf6t3e4sjlv" path="res://themes/RetroTheme/button/Button_Sand_Disabled.png" id="2_gcge7"]
@@ -13,14 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://w3wvkri137t4" path="res://themes/RetroTheme/textedit/TextBoxWhite.png" id="6_3pffs"]
 [ext_resource type="Texture2D" uid="uid://d1338jfh7sbxd" path="res://themes/RetroTheme/textedit/TextBoxDisabled.png" id="7_q68lh"]
 [ext_resource type="Texture2D" uid="uid://bhw30lj1qy23j" path="res://themes/RetroTheme/checkbox/Checkbox_Sand_Unchecked.png" id="7_xseil"]
-[ext_resource type="FontFile" uid="uid://bowouxapjhipp" path="res://themes/RetroTheme/fonts/PICO-8.ttf" id="8_hrslv"]
 [ext_resource type="Texture2D" uid="uid://4mtvw347wixq" path="res://themes/RetroTheme/button/Button_Blue_MoreDepth.png" id="10_iinjc"]
 [ext_resource type="Texture2D" uid="uid://ckhkvwlmvp7ox" path="res://themes/RetroTheme/checkbox/Checkbox_Blue_Checked.png" id="10_wkrli"]
 [ext_resource type="Texture2D" uid="uid://cj53drdtle804" path="res://themes/RetroTheme/separator/Sep_Blue.png" id="11_8g87r"]
 [ext_resource type="Texture2D" uid="uid://dbww2vi7yt431" path="res://themes/RetroTheme/checkbox/Checkbox_Blue_Unchecked.png" id="11_bkuen"]
+[ext_resource type="FontFile" uid="uid://dr55g16lp7ag8" path="res://themes/RetroTheme/fonts/PixeloidMono.ttf" id="12_vsgmv"]
 [ext_resource type="StyleBox" uid="uid://tfkyklrlqm8x" path="res://themes/os9/scrollbar/scrollbar_grabber_idle.tres" id="14_psfw8"]
 [ext_resource type="Texture2D" uid="uid://cs32pqa2pr23h" path="res://themes/RetroTheme/slider/Slider_Blue_Grabber.png" id="14_q5ivs"]
 [ext_resource type="Texture2D" uid="uid://j4wmqpeo05ge" path="res://themes/RetroTheme/slider/Slider_Blue_Background.png" id="16_tbim2"]
+[ext_resource type="Texture2D" uid="uid://ca5kqnk2xsxp8" path="res://themes/RetroTheme/button/ButtonClose2.png" id="22_dqchj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqotk"]
 texture = ExtResource("3_jl4u1")
@@ -37,13 +38,6 @@ texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icibk"]
-texture = ExtResource("4_a2csm")
-texture_margin_left = 32.0
-texture_margin_top = 32.0
-texture_margin_right = 32.0
-texture_margin_bottom = 32.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7unwq"]
 texture = ExtResource("2_gcge7")
@@ -131,6 +125,7 @@ texture_margin_left = 6.0
 texture_margin_top = 6.0
 texture_margin_right = 6.0
 texture_margin_bottom = 6.0
+expand_margin_right = 1.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utacu"]
 texture = ExtResource("4_a2csm")
@@ -239,6 +234,19 @@ expand_margin_top = 7.0
 expand_margin_bottom = 13.0
 modulate_color = Color(0.74902, 0.72549, 0.764706, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ho6iy"]
+texture = ExtResource("3_jl4u1")
+texture_margin_left = 6.0
+texture_margin_top = 38.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+expand_margin_left = 6.0
+expand_margin_top = 31.0
+expand_margin_right = 10.0
+expand_margin_bottom = 6.0
+modulate_color = Color(0.51881, 0.51881, 0.824081, 1)
+draw_center = false
+
 [resource]
 AcceptDialog/colors/title_color = Color(1, 1, 1, 1)
 AcceptDialog/constants/buttons_min_width = 62
@@ -250,7 +258,7 @@ AcceptDialog/fonts/title_font = ExtResource("1_m7g1y")
 AcceptDialog/icons/close = ExtResource("2_wqh45")
 AcceptDialog/styles/embedded_border = SubResource("StyleBoxTexture_rqotk")
 AcceptDialog/styles/embedded_unfocused_border = SubResource("StyleBoxTexture_emwui")
-AcceptDialog/styles/panel = SubResource("StyleBoxTexture_icibk")
+AcceptDialog/styles/panel = null
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.627451, 0.560784, 0.407843, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -276,8 +284,8 @@ CodeEdit/colors/line_number_color = Color(0.662745, 0.647059, 0.666667, 1)
 CodeEdit/colors/selection_color = Color(0, 0.501961, 0.501961, 1)
 CodeEdit/constants/caret_width = 7
 CodeEdit/constants/completion_lines = 7
-CodeEdit/font_sizes/font_size = 10
-CodeEdit/fonts/font = ExtResource("8_hrslv")
+CodeEdit/font_sizes/font_size = 16
+CodeEdit/fonts/font = ExtResource("1_m7g1y")
 LineEdit/colors/caret_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
@@ -330,3 +338,8 @@ VScrollBar/styles/grabber = SubResource("StyleBoxTexture_hv83l")
 VScrollBar/styles/grabber_highlight = ExtResource("14_psfw8")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_0ufou")
 VScrollBar/styles/scroll = SubResource("StyleBoxTexture_b0f23")
+Window/constants/title_height = 28
+Window/fonts/title_font = ExtResource("12_vsgmv")
+Window/icons/close = ExtResource("2_wqh45")
+Window/icons/close_pressed = ExtResource("22_dqchj")
+Window/styles/embedded_border = SubResource("StyleBoxTexture_ho6iy")
