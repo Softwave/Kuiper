@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvx3hvav2n7b7"
-path="res://.godot/imported/Panel.png-e9e2089c71f4cc929e0ad5bc7b86f2e3.ctex"
+path="res://godot/imported/Panel.png-e9e2089c71f4cc929e0ad5bc7b86f2e3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/space-worm-theme/panel/Panel.png"
-dest_files=["res://.godot/imported/Panel.png-e9e2089c71f4cc929e0ad5bc7b86f2e3.ctex"]
+dest_files=["res://godot/imported/Panel.png-e9e2089c71f4cc929e0ad5bc7b86f2e3.ctex"]
 
 [params]
 

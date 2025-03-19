@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://2cos6nviuwk8"
-path="res://.godot/imported/CozetteVector.ttf-a4ed56ab8392a8bc401777580b611161.fontdata"
+path="res://godot/imported/CozetteVector.ttf-a4ed56ab8392a8bc401777580b611161.fontdata"
 
 [deps]
 
 source_file="res://themes/RetroTheme/fonts/CozetteVector.ttf"
-dest_files=["res://.godot/imported/CozetteVector.ttf-a4ed56ab8392a8bc401777580b611161.fontdata"]
+dest_files=["res://godot/imported/CozetteVector.ttf-a4ed56ab8392a8bc401777580b611161.fontdata"]
 
 [params]
 

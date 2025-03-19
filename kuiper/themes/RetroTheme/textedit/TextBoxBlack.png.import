@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co0h47x5m7lc3"
-path="res://.godot/imported/TextBoxBlack.png-eade40766addf5adedd94ebf5859424b.ctex"
+path="res://godot/imported/TextBoxBlack.png-eade40766addf5adedd94ebf5859424b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/RetroTheme/textedit/TextBoxBlack.png"
-dest_files=["res://.godot/imported/TextBoxBlack.png-eade40766addf5adedd94ebf5859424b.ctex"]
+dest_files=["res://godot/imported/TextBoxBlack.png-eade40766addf5adedd94ebf5859424b.ctex"]
 
 [params]
 

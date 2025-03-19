@@ -129,6 +129,12 @@ var regions = [{
 	"end": "'",
 	"color": to_color("#0fd688"),
 	"inline": false
+},
+{
+	"start": "/*",
+	"end": "*/",
+	"color": colors["comment"],
+	"inline": false
 },{
 	"start": '//',
 	"end": '',

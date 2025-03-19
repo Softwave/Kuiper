@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdrydq61w6idd"
-path="res://.godot/imported/Slider_Blue_Grabber.png-0bca7d078e08be477aea6a93023fb864.ctex"
+path="res://godot/imported/Slider_Blue_Grabber.png-0bca7d078e08be477aea6a93023fb864.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/space-worm-theme/scrollbar/Slider_Blue_Grabber.png"
-dest_files=["res://.godot/imported/Slider_Blue_Grabber.png-0bca7d078e08be477aea6a93023fb864.ctex"]
+dest_files=["res://godot/imported/Slider_Blue_Grabber.png-0bca7d078e08be477aea6a93023fb864.ctex"]
 
 [params]
 

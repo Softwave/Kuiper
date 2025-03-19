@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1nih1844agfm"
-path="res://.godot/imported/TextEditDisabled.png-6a53eae5c3482eff197247a78d63016b.ctex"
+path="res://godot/imported/TextEditDisabled.png-6a53eae5c3482eff197247a78d63016b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/space-worm-theme/textedit/TextEditDisabled.png"
-dest_files=["res://.godot/imported/TextEditDisabled.png-6a53eae5c3482eff197247a78d63016b.ctex"]
+dest_files=["res://godot/imported/TextEditDisabled.png-6a53eae5c3482eff197247a78d63016b.ctex"]
 
 [params]
 

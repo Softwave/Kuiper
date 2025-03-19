@@ -3,7 +3,8 @@ extends Control
 func _ready():
 	# Connect the file_selected signal to the method
 	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
-
+	#if !$FileDialog.is_connected("file_selected", Callable(self, "_on_file_dialog_file_selected")):
+	#	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
 
 func _process(delta):
 	$Panel/MainMenu/MarginContainer2/Clock.text = Time.get_time_string_from_system(false)
@@ -70,11 +71,11 @@ func _on_edit_id_pressed(id:int):
 
 func _on_special_id_pressed(id:int):
 	if id == 0: # item 1
-		print("Hello")
 		$Panel/ColorRect.visible = !$Panel/ColorRect.visible 
 	
 func _on_help_id_pressed(id:int):
-	$AboutWindow.visible = true 
+	if id == 0:
+		$AboutWindow.visible = true 
 	
 
 func _on_quit_about_button_pressed() -> void:
@@ -83,5 +84,3 @@ func _on_quit_about_button_pressed() -> void:
 
 func _on_about_window_close_requested() -> void:
 	$AboutWindow.visible = false
-
-

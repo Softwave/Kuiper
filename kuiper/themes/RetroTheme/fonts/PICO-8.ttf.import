@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bowouxapjhipp"
-path="res://.godot/imported/PICO-8.ttf-8fdbe46ca6c3839fdf2f6b1c130b7cd9.fontdata"
+path="res://godot/imported/PICO-8.ttf-8fdbe46ca6c3839fdf2f6b1c130b7cd9.fontdata"
 
 [deps]
 
 source_file="res://themes/RetroTheme/fonts/PICO-8.ttf"
-dest_files=["res://.godot/imported/PICO-8.ttf-8fdbe46ca6c3839fdf2f6b1c130b7cd9.fontdata"]
+dest_files=["res://godot/imported/PICO-8.ttf-8fdbe46ca6c3839fdf2f6b1c130b7cd9.fontdata"]
 
 [params]
 

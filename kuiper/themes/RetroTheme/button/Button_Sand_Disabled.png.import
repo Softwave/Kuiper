@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxmf6t3e4sjlv"
-path="res://.godot/imported/Button_Sand_Disabled.png-e8eeeeb73b4a2f65a115e9af8455f092.ctex"
+path="res://godot/imported/Button_Sand_Disabled.png-e8eeeeb73b4a2f65a115e9af8455f092.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/RetroTheme/button/Button_Sand_Disabled.png"
-dest_files=["res://.godot/imported/Button_Sand_Disabled.png-e8eeeeb73b4a2f65a115e9af8455f092.ctex"]
+dest_files=["res://godot/imported/Button_Sand_Disabled.png-e8eeeeb73b4a2f65a115e9af8455f092.ctex"]
 
 [params]
 

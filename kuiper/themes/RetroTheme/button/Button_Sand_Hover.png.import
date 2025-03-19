@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3fc3go16d67e"
-path="res://.godot/imported/Button_Sand_Hover.png-5f130a084ce03bd5e8588c9cf439e90a.ctex"
+path="res://godot/imported/Button_Sand_Hover.png-5f130a084ce03bd5e8588c9cf439e90a.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/RetroTheme/button/Button_Sand_Hover.png"
-dest_files=["res://.godot/imported/Button_Sand_Hover.png-5f130a084ce03bd5e8588c9cf439e90a.ctex"]
+dest_files=["res://godot/imported/Button_Sand_Hover.png-5f130a084ce03bd5e8588c9cf439e90a.ctex"]
 
 [params]
 

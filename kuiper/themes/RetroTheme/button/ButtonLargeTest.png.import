@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tnu3xt5gh4ur"
-path="res://.godot/imported/ButtonLargeTest.png-acad28eb55f20ffac52ee939d1cee8b9.ctex"
+path="res://godot/imported/ButtonLargeTest.png-acad28eb55f20ffac52ee939d1cee8b9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/RetroTheme/button/ButtonLargeTest.png"
-dest_files=["res://.godot/imported/ButtonLargeTest.png-acad28eb55f20ffac52ee939d1cee8b9.ctex"]
+dest_files=["res://godot/imported/ButtonLargeTest.png-acad28eb55f20ffac52ee939d1cee8b9.ctex"]
 
 [params]
 

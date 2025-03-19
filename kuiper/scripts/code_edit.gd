@@ -1,3 +1,4 @@
+
 extends CodeEdit
 
 var changed := false

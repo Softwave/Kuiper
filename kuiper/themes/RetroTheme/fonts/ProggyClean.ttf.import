@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://crpg4pfsmatt6"
-path="res://.godot/imported/ProggyClean.ttf-19b0a311bd233b8497356f57849d0d78.fontdata"
+path="res://godot/imported/ProggyClean.ttf-19b0a311bd233b8497356f57849d0d78.fontdata"
 
 [deps]
 
 source_file="res://themes/RetroTheme/fonts/ProggyClean.ttf"
-dest_files=["res://.godot/imported/ProggyClean.ttf-19b0a311bd233b8497356f57849d0d78.fontdata"]
+dest_files=["res://godot/imported/ProggyClean.ttf-19b0a311bd233b8497356f57849d0d78.fontdata"]
 
 [params]
 

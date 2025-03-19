@@ -321,6 +321,7 @@ expand_margin_left = 6.0
 expand_margin_top = 31.0
 expand_margin_right = 10.0
 expand_margin_bottom = 6.0
+modulate_color = Color(0.439216, 0.419608, 0.596078, 1)
 
 [resource]
 Button/fonts/font = ExtResource("1_6u0fb")
@@ -425,8 +426,8 @@ VSlider/icons/grabber_highlight = ExtResource("16_12tqw")
 VSlider/styles/grabber_area = SubResource("StyleBoxTexture_r8nmx")
 VSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_vanun")
 VSlider/styles/slider = SubResource("StyleBoxTexture_usfiw")
-Window/colors/title_color = Color(0, 0, 0, 1)
-Window/constants/title_height = 27
+Window/colors/title_color = Color(0.741176, 0.776471, 0.815686, 1)
+Window/constants/title_height = 25
 Window/fonts/title_font = ExtResource("1_6u0fb")
 Window/icons/close = ExtResource("11_8miur")
 Window/icons/close_pressed = ExtResource("12_hyqct")

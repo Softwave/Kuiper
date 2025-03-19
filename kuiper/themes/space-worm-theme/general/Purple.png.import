@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4eavohk31koc"
-path="res://.godot/imported/Purple.png-1d1682d4fb4d71df79b05a6a898c4496.ctex"
+path="res://godot/imported/Purple.png-1d1682d4fb4d71df79b05a6a898c4496.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/space-worm-theme/general/Purple.png"
-dest_files=["res://.godot/imported/Purple.png-1d1682d4fb4d71df79b05a6a898c4496.ctex"]
+dest_files=["res://godot/imported/Purple.png-1d1682d4fb4d71df79b05a6a898c4496.ctex"]
 
 [params]
 

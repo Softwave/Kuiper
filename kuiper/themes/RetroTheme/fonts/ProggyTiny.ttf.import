@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b17kpgi3ngcys"
-path="res://.godot/imported/ProggyTiny.ttf-4c2b0dabf2ecb76aff689acf35496661.fontdata"
+path="res://godot/imported/ProggyTiny.ttf-4c2b0dabf2ecb76aff689acf35496661.fontdata"
 
 [deps]
 
 source_file="res://themes/RetroTheme/fonts/ProggyTiny.ttf"
-dest_files=["res://.godot/imported/ProggyTiny.ttf-4c2b0dabf2ecb76aff689acf35496661.fontdata"]
+dest_files=["res://godot/imported/ProggyTiny.ttf-4c2b0dabf2ecb76aff689acf35496661.fontdata"]
 
 [params]
 

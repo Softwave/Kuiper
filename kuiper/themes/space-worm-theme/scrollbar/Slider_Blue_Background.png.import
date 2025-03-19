@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpy10unqk34u2"
-path="res://.godot/imported/Slider_Blue_Background.png-438de5a20bd659f9b4782272a5254a67.ctex"
+path="res://godot/imported/Slider_Blue_Background.png-438de5a20bd659f9b4782272a5254a67.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/space-worm-theme/scrollbar/Slider_Blue_Background.png"
-dest_files=["res://.godot/imported/Slider_Blue_Background.png-438de5a20bd659f9b4782272a5254a67.ctex"]
+dest_files=["res://godot/imported/Slider_Blue_Background.png-438de5a20bd659f9b4782272a5254a67.ctex"]
 
 [params]
 

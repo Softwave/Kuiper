@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dcoyeg1tf1500"
-path="res://.godot/imported/ProggyClean.ttf-46d2e51c50e46c169ab64f4f9110a4c4.fontdata"
+path="res://godot/imported/ProggyClean.ttf-46d2e51c50e46c169ab64f4f9110a4c4.fontdata"
 
 [deps]
 
 source_file="res://themes/space-worm-theme/fonts/ProggyClean.ttf"
-dest_files=["res://.godot/imported/ProggyClean.ttf-46d2e51c50e46c169ab64f4f9110a4c4.fontdata"]
+dest_files=["res://godot/imported/ProggyClean.ttf-46d2e51c50e46c169ab64f4f9110a4c4.fontdata"]
 
 [params]
 

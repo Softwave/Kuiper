@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca5kqnk2xsxp8"
-path="res://.godot/imported/ButtonClose2.png-1f97007e1f28ec3cf93f9fda483cc04f.ctex"
+path="res://godot/imported/ButtonClose2.png-1f97007e1f28ec3cf93f9fda483cc04f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://themes/RetroTheme/button/ButtonClose2.png"
-dest_files=["res://.godot/imported/ButtonClose2.png-1f97007e1f28ec3cf93f9fda483cc04f.ctex"]
+dest_files=["res://godot/imported/ButtonClose2.png-1f97007e1f28ec3cf93f9fda483cc04f.ctex"]
 
 [params]
 
