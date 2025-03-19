@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=68 format=3 uid="uid://bqdn1hl5c7fvl"]
+[gd_resource type="Theme" load_steps=69 format=3 uid="uid://bqdn1hl5c7fvl"]
 
 [ext_resource type="FontFile" uid="uid://dcoyeg1tf1500" path="res://themes/space-worm-theme/fonts/ProggyClean.ttf" id="1_6u0fb"]
 [ext_resource type="Texture2D" uid="uid://ba7mvawrmi0qt" path="res://themes/space-worm-theme/button/Blue_Hover.png" id="1_gebbq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cwpjdqbvip2vt" path="res://themes/space-worm-theme/textedit/TextEditWhite.png" id="5_3rf8f"]
 [ext_resource type="Texture2D" uid="uid://bk7etkvyd8tlh" path="res://themes/space-worm-theme/checkbox/Checkbox_Blue_Unchecked.png" id="5_f0op2"]
 [ext_resource type="Texture2D" uid="uid://c1nih1844agfm" path="res://themes/space-worm-theme/textedit/TextEditDisabled.png" id="6_ks1cx"]
+[ext_resource type="FontFile" uid="uid://jv63q3vgtlhu" path="res://themes/space-worm-theme/fonts/VT323-Regular.ttf" id="6_pry4s"]
 [ext_resource type="Texture2D" uid="uid://dix04hpse2rvu" path="res://themes/space-worm-theme/general/LighterBlueHover.png" id="8_0vxfq"]
 [ext_resource type="Texture2D" uid="uid://cdrydq61w6idd" path="res://themes/space-worm-theme/scrollbar/Slider_Blue_Grabber.png" id="8_8ni7u"]
 [ext_resource type="Texture2D" uid="uid://w58p2fbmrwo0" path="res://themes/space-worm-theme/general/LighterBlue.png" id="8_88cds"]
@@ -161,7 +162,7 @@ expand_margin_right = 2.0
 texture = ExtResource("13_nbyou")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqwtq"]
-bg_color = Color(0, 0.501961, 0.501961, 1)
+bg_color = Color(0.160784, 0.337255, 0.376471, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_71j4x"]
 texture = ExtResource("8_88cds")
@@ -351,7 +352,8 @@ CodeEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 CodeEdit/colors/font_selected_color = Color(1, 1, 1, 1)
 CodeEdit/colors/line_number_color = Color(0.662745, 0.647059, 0.666667, 1)
 CodeEdit/colors/selection_color = Color(0, 0.501961, 0.501961, 1)
-CodeEdit/fonts/font = ExtResource("1_6u0fb")
+CodeEdit/font_sizes/font_size = 22
+CodeEdit/fonts/font = ExtResource("6_pry4s")
 ColorPicker/icons/color_okhsl_hue = null
 ColorPicker/icons/sample_bg = ExtResource("8_88cds")
 HScrollBar/styles/grabber = SubResource("StyleBoxTexture_4xi7t")

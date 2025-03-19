@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://calsanliwqsh3"]
+[gd_scene load_steps=20 format=3 uid="uid://calsanliwqsh3"]
 
 [ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://themes/space-worm-theme/space_worm_theme.tres" id="1_2dmas"]
 [ext_resource type="Theme" uid="uid://bddjgmb22q2vx" path="res://themes/RetroTheme/RetroTheme.tres" id="1_h37q1"]
@@ -6,7 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://dgwt7q0ivgah" path="res://themes/RetroTheme/textedit/TextBoxIdleBlack.png" id="2_ul73e"]
 [ext_resource type="Script" path="res://scripts/code_edit.gd" id="3_uewk0"]
 [ext_resource type="FontFile" uid="uid://bowouxapjhipp" path="res://themes/RetroTheme/fonts/PICO-8.ttf" id="4_5hpkv"]
+[ext_resource type="Shader" path="res://shaders/crt.gdshader" id="6_t2xuk"]
+[ext_resource type="FontFile" uid="uid://jv63q3vgtlhu" path="res://themes/space-worm-theme/fonts/VT323-Regular.ttf" id="7_k5qx1"]
 [ext_resource type="FontFile" uid="uid://dr55g16lp7ag8" path="res://themes/RetroTheme/fonts/PixeloidMono.ttf" id="7_ugnit"]
+[ext_resource type="Texture2D" uid="uid://bnf4a0raxkqen" path="res://themes/space-worm-theme/general/Blue.png" id="8_spvia"]
+[ext_resource type="Texture2D" uid="uid://dix04hpse2rvu" path="res://themes/space-worm-theme/general/LighterBlueHover.png" id="8_v1obr"]
+[ext_resource type="Texture2D" uid="uid://dnmhtuhbayaqv" path="res://themes/space-worm-theme/general/GreenPressed.png" id="9_iafgo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr88o"]
 texture = ExtResource("2_ul73e")
@@ -20,6 +25,55 @@ number_color = Color(0.713726, 0.505882, 0.752941, 1)
 symbol_color = Color(1, 0.843137, 0, 1)
 function_color = Color(0.858824, 0.835294, 0.694118, 1)
 member_variable_color = Color(0.337255, 0.611765, 0.839216, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_23pcx"]
+shader = ExtResource("6_t2xuk")
+shader_parameter/resolution = Vector2(640, 360)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.0
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -1.0
+shader_parameter/pixel_strength = -8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a26w8"]
+texture = ExtResource("8_v1obr")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 3.0
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijejx"]
+texture = ExtResource("9_iafgo")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 3.0
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hayr"]
+texture = ExtResource("8_spvia")
+texture_margin_left = 6.0
+texture_margin_top = 3.0
+texture_margin_right = 6.0
+texture_margin_bottom = 3.0
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_t8o6w"]
+font = ExtResource("7_ugnit")
+font_size = 14
+font_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,100 +93,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainMenu" type="Panel" parent="Panel"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 41.0
-grow_horizontal = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/MainMenu"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -160.0
-offset_bottom = 40.0
-grow_horizontal = 0
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 20
-
-[node name="Clock" type="Label" parent="Panel/MainMenu/MarginContainer2"]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_5hpkv")
-theme_override_font_sizes/font_size = 16
-text = "10:05
-"
-horizontal_alignment = 2
-vertical_alignment = 1
-clip_text = true
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/MainMenu"]
-layout_mode = 0
-offset_right = 211.0
-offset_bottom = 70.0
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 13
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="MenuBar" type="MenuBar" parent="Panel/MainMenu/MarginContainer"]
-custom_minimum_size = Vector2(0, 48)
-layout_mode = 2
-theme_override_constants/h_separation = 16
-
-[node name="File" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
-auto_translate_mode = 1
-title = "File"
-size = Vector2i(110, 118)
-item_count = 5
-item_0/text = "New"
-item_1/text = "Open"
-item_1/id = 1
-item_2/text = "Save"
-item_2/id = 2
-item_3/text = "Save As..."
-item_3/id = 3
-item_4/text = "Quit Program"
-item_4/id = 4
-
-[node name="Edit" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
-auto_translate_mode = 1
-title = "File"
-size = Vector2i(110, 118)
-item_count = 6
-item_0/text = "Cut"
-item_1/text = "Copy"
-item_1/id = 1
-item_2/text = "Paste"
-item_2/id = 2
-item_3/id = 3
-item_3/separator = true
-item_4/text = "Undo"
-item_4/id = 4
-item_5/text = "Redo"
-item_5/id = 5
-
-[node name="Special" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
-auto_translate_mode = 1
-title = "File"
-size = Vector2i(110, 118)
-item_count = 3
-item_0/text = "Item 1"
-item_1/text = "Item 2"
-item_1/id = 1
-item_2/text = "Item 3"
-item_2/id = 2
-
-[node name="Help" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
-auto_translate_mode = 1
-title = "File"
-size = Vector2i(110, 118)
-item_count = 1
-item_0/text = "About"
-
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 visible = false
 layout_mode = 0
@@ -149,12 +109,12 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.662745, 0.647059, 0.666667, 1)
-theme_override_colors/selection_color = Color(0.713726, 0.505882, 0.752941, 1)
+theme_override_colors/selection_color = Color(0.144616, 0.147214, 0.191329, 1)
 theme_override_colors/caret_color = Color(0.662745, 0.647059, 0.666667, 1)
 theme_override_constants/line_spacing = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_yr88o")
 theme_override_colors/line_number_color = Color(0.662745, 0.647059, 0.666667, 1)
-theme_override_colors/code_folding_color = Color(1, 0.843137, 0, 1)
+theme_override_colors/code_folding_color = Color(0.619608, 0.658824, 0.929412, 1)
 text = "// Calculate Fibonacci Numbers
 // Originally written by Softwave (https://github.com/Softwave)
 // Massive speedups by Francesco146 and LizzyFleckenstein03 
@@ -267,6 +227,122 @@ auto_brace_completion_enabled = true
 auto_brace_completion_highlight_matching = true
 script = ExtResource("3_uewk0")
 
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_23pcx")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MainMenu" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MainMenu"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+
+[node name="Clock" type="Label" parent="Panel/MainMenu/MarginContainer2"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5hpkv")
+theme_override_font_sizes/font_size = 16
+text = "10:05
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+clip_text = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MainMenu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -28.5
+offset_right = 293.0
+offset_bottom = 42.5
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 13
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MenuBar" type="MenuBar" parent="Panel/MainMenu/MarginContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 16
+theme_override_fonts/font = ExtResource("7_k5qx1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_a26w8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ijejx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0hayr")
+
+[node name="File" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+auto_translate_mode = 1
+title = "File"
+size = Vector2i(110, 118)
+item_count = 5
+item_0/text = "New"
+item_1/text = "Open"
+item_1/id = 1
+item_2/text = "Save"
+item_2/id = 2
+item_3/text = "Save As..."
+item_3/id = 3
+item_4/text = "Quit Program"
+item_4/id = 4
+
+[node name="Edit" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+auto_translate_mode = 1
+title = "File"
+size = Vector2i(110, 118)
+item_count = 6
+item_0/text = "Cut"
+item_1/text = "Copy"
+item_1/id = 1
+item_2/text = "Paste"
+item_2/id = 2
+item_3/id = 3
+item_3/separator = true
+item_4/text = "Undo"
+item_4/id = 4
+item_5/text = "Redo"
+item_5/id = 5
+
+[node name="Special" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+auto_translate_mode = 1
+title = "File"
+size = Vector2i(110, 118)
+item_count = 3
+item_0/text = "Toggle CRT"
+item_1/text = "Item 2"
+item_1/id = 1
+item_2/text = "Item 3"
+item_2/id = 2
+
+[node name="Help" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+auto_translate_mode = 1
+title = "File"
+size = Vector2i(110, 118)
+item_count = 1
+item_0/text = "About"
+
 [node name="FileDialog" type="FileDialog" parent="."]
 size = Vector2i(348, 215)
 use_native_dialog = true
@@ -305,24 +381,21 @@ horizontal_alignment = 1
 layout_mode = 0
 offset_left = 6.0
 offset_top = 6.0
-offset_right = 270.0
-offset_bottom = 93.0
+offset_right = 318.0
+offset_bottom = 233.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_ugnit")
 theme_override_font_sizes/font_size = 12
-text = "Kuiper is a simple code editor I wrote 
-chiefly to be aesthetically pleasing, &
-so good for my personal projects and 
-streaming.
-
-
-
+text = "Kuiper is a simple code editor written chiefly to be aesthetically pleasing and good for use in live-coding and streaming. 
 
 Version 0.9
 Copyright 2025, Softwave
 https://s0ftwave.net/"
+label_settings = SubResource("LabelSettings_t8o6w")
+autowrap_mode = 3
 
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/File" to="." method="_on_file_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Edit" to="." method="_on_edit_id_pressed"]
+[connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Special" to="." method="_on_special_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Help" to="." method="_on_help_id_pressed"]
 [connection signal="close_requested" from="AboutWindow" to="." method="_on_about_window_close_requested"]
