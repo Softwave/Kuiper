@@ -1,5 +1,14 @@
 extends Control
 
+# The editor config file
+var config_file:ConfigFile = ConfigFile.new()
+var config_path:String = "user://editor.cfg"
+# Settings
+var current_lang:String
+var crt_setting:bool = true 
+var search_setting:bool = false
+
+
 var last_caret_pos_x:int = 0
 var last_caret_pos_y:int = 0
 
@@ -7,8 +16,41 @@ func _ready():
 	# Connect the file_selected signal to the method
 	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
 	set("emoji_menu_enabled", true)
-	#if !$FileDialog.is_connected("file_selected", Callable(self, "_on_file_dialog_file_selected")):
-	#	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
+
+	# Load the config file
+	if config_file.load(config_path) == OK:
+		if config_file.has_section_key("settings", "lang"):
+			print(config_file.get_value("settings", "lang"))
+			current_lang = config_file.get_value("settings", "lang")
+		else:
+			current_lang = "C"  # Default only if not in config
+		if config_file.has_section_key("settings", "crt"):
+			crt_setting = config_file.get_value("settings", "crt")
+		if config_file.has_section_key("settings", "search"):
+			search_setting = config_file.get_value("settings", "search")
+	else:
+		current_lang = "C"  # Default if config file doesn't exist
+	
+	# Apply the settings
+	$Panel/CodeEdit.language = current_lang
+	$Panel/ColorRect.visible = crt_setting
+	match current_lang:
+		"C":
+			$Panel/CodeEdit.set_script(load("res://scripts/code_edit_c.gd"))
+		"6502":
+			$Panel/CodeEdit.set_script(load("res://scripts/code_edit_6502.gd"))
+		"Fortran":
+			$Panel/CodeEdit.set_script(load("res://scripts/code_edit_fortran.gd"))
+		"GLSL":
+			$Panel/CodeEdit.set_script(load("res://scripts/code_edit_glsl.gd"))
+		_:
+			$Panel/CodeEdit.set_script(load("res://scripts/code_edit_c.gd"))
+	
+	$Panel/CodeEdit._ready()
+	# Show the search bar if it was visible before
+	$Panel/MainMenu/MarginContainer/MenuBar/LineEdit.visible = search_setting
+	$Panel/MainMenu/MarginContainer/MenuBar/ButtonSearch.visible = search_setting
+	
 
 func _process(delta):
 	$Panel/MainMenu/MarginContainer2/Clock.text = Time.get_time_string_from_system(false)
@@ -76,7 +118,19 @@ func _on_edit_id_pressed(id:int):
 func _on_special_id_pressed(id:int):
 	if id == 0: # item 1
 		$Panel/ColorRect.visible = !$Panel/ColorRect.visible 
-	
+	if id == 1:
+		# Save the settings
+		config_file.set_value("settings", "lang", $Panel/CodeEdit.language)
+		config_file.set_value("settings", "crt", $Panel/ColorRect.visible)
+		config_file.set_value("settings", "search", $Panel/MainMenu/MarginContainer/MenuBar/LineEdit.visible)
+		config_file.save(config_path)
+		# Reload the settings
+	if id == 2:
+		# Toggle showing search bar and button
+		$Panel/MainMenu/MarginContainer/MenuBar/LineEdit.visible = !$Panel/MainMenu/MarginContainer/MenuBar/LineEdit.visible
+		$Panel/MainMenu/MarginContainer/MenuBar/ButtonSearch.visible = !$Panel/MainMenu/MarginContainer/MenuBar/ButtonSearch.visible
+		
+
 func _on_help_id_pressed(id:int):
 	if id == 0:
 		$AboutWindow.visible = true 

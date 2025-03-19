@@ -286,9 +286,9 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -28.5
+offset_top = -29.0
 offset_right = 293.0
-offset_bottom = 42.5
+offset_bottom = 42.0
 grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 13
@@ -351,6 +351,11 @@ offset_left = 461.0
 offset_top = -0.5
 offset_right = 519.0
 offset_bottom = 29.5
+theme_override_fonts/font = ExtResource("7_k5qx1")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/hover = SubResource("StyleBoxTexture_a26w8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ijejx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0hayr")
 text = "Search
 "
 
@@ -358,17 +363,23 @@ text = "Search
 auto_translate_mode = 1
 title = "File"
 size = Vector2i(110, 118)
-item_count = 1
+item_count = 3
 item_0/text = "Toggle CRT"
+item_1/text = "Save Settings"
+item_1/id = 1
+item_2/text = "Show Search"
+item_2/id = 2
 script = ExtResource("11_6tywr")
 
 [node name="LangSubmenu" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar/Special"]
-item_count = 3
+item_count = 4
 item_0/text = "C"
 item_1/text = "6502 ASM"
 item_1/id = 1
 item_2/text = "Fortran"
 item_2/id = 2
+item_3/text = "GLSL Shading Language"
+item_3/id = 3
 
 [node name="Help" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
 auto_translate_mode = 1
