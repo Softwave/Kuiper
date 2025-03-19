@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://calsanliwqsh3"]
 
+[ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://themes/space-worm-theme/space_worm_theme.tres" id="1_2dmas"]
 [ext_resource type="Theme" uid="uid://bddjgmb22q2vx" path="res://themes/RetroTheme/RetroTheme.tres" id="1_h37q1"]
-[ext_resource type="StyleBox" uid="uid://yx2uvxo4off1" path="res://themes/os9/mainmenu/mainmenu.tres" id="2_bq6ts"]
 [ext_resource type="Script" path="res://scripts/text_editor.gd" id="2_otcw6"]
 [ext_resource type="Texture2D" uid="uid://dgwt7q0ivgah" path="res://themes/RetroTheme/textedit/TextBoxIdleBlack.png" id="2_ul73e"]
 [ext_resource type="Script" path="res://scripts/code_edit.gd" id="3_uewk0"]
@@ -28,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_h37q1")
+theme = ExtResource("1_2dmas")
 script = ExtResource("2_otcw6")
 
 [node name="Panel" type="Panel" parent="."]
@@ -43,8 +43,8 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 41.0
 grow_horizontal = 2
-theme_override_styles/panel = ExtResource("2_bq6ts")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel/MainMenu"]
 layout_mode = 1
@@ -71,10 +71,10 @@ clip_text = true
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MainMenu"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 211.0
+offset_bottom = 70.0
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 12
+theme_override_constants/margin_top = 13
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
@@ -134,6 +134,7 @@ item_count = 1
 item_0/text = "About"
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
+visible = false
 layout_mode = 0
 offset_right = 12.0
 offset_bottom = 12.0
@@ -254,9 +255,12 @@ int main(int argc, char *argv[])
 wrap_mode = 1
 scroll_smooth = true
 minimap_draw = true
+caret_type = 1
+caret_blink = true
 syntax_highlighter = SubResource("CodeHighlighter_77a87")
 line_folding = true
 gutters_draw_line_numbers = true
+gutters_draw_fold_gutter = true
 code_completion_enabled = true
 indent_automatic = true
 auto_brace_completion_enabled = true
@@ -315,9 +319,8 @@ streaming.
 
 
 Version 0.9
-Copyright 2025, Serene Leyba
-https://softwave.itch.io/
-"
+Copyright 2025, Softwave
+https://s0ftwave.net/"
 
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/File" to="." method="_on_file_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Edit" to="." method="_on_edit_id_pressed"]
