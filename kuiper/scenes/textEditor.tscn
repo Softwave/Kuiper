@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://calsanliwqsh3"]
+[gd_scene load_steps=23 format=3 uid="uid://calsanliwqsh3"]
 
 [ext_resource type="Theme" uid="uid://bqdn1hl5c7fvl" path="res://themes/space-worm-theme/space_worm_theme.tres" id="1_2dmas"]
 [ext_resource type="Script" path="res://scripts/text_editor.gd" id="2_otcw6"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dix04hpse2rvu" path="res://themes/space-worm-theme/general/LighterBlueHover.png" id="8_v1obr"]
 [ext_resource type="Texture2D" uid="uid://dnmhtuhbayaqv" path="res://themes/space-worm-theme/general/GreenPressed.png" id="9_iafgo"]
 [ext_resource type="Script" path="res://scripts/special_menu.gd" id="11_6tywr"]
+[ext_resource type="Script" path="res://scenes/line_edit.gd" id="11_dceqv"]
 [ext_resource type="Texture2D" uid="uid://cyymtcpg466gl" path="res://themes/space-worm-theme/button/ButtonLargeTest2.png" id="13_d5irh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr88o"]
@@ -337,16 +338,28 @@ item_4/id = 4
 item_5/text = "Redo"
 item_5/id = 5
 
+[node name="LineEdit" type="LineEdit" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+layout_mode = 0
+offset_left = 275.0
+offset_right = 455.0
+offset_bottom = 30.0
+script = ExtResource("11_dceqv")
+
+[node name="ButtonSearch" type="Button" parent="Panel/MainMenu/MarginContainer/MenuBar"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = -0.5
+offset_right = 519.0
+offset_bottom = 29.5
+text = "Search
+"
+
 [node name="Special" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar"]
 auto_translate_mode = 1
 title = "File"
 size = Vector2i(110, 118)
-item_count = 3
+item_count = 1
 item_0/text = "Toggle CRT"
-item_1/text = "Item 2"
-item_1/id = 1
-item_2/text = "Item 3"
-item_2/id = 2
 script = ExtResource("11_6tywr")
 
 [node name="LangSubmenu" type="PopupMenu" parent="Panel/MainMenu/MarginContainer/MenuBar/Special"]
@@ -416,9 +429,11 @@ https://s0ftwave.net/"
 label_settings = SubResource("LabelSettings_t8o6w")
 autowrap_mode = 3
 
+[connection signal="caret_changed" from="Panel/CodeEdit" to="." method="_on_code_edit_caret_changed"]
 [connection signal="text_changed" from="Panel/CodeEdit" to="Panel/CodeEdit" method="_on_text_changed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/File" to="." method="_on_file_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Edit" to="." method="_on_edit_id_pressed"]
+[connection signal="pressed" from="Panel/MainMenu/MarginContainer/MenuBar/ButtonSearch" to="." method="_on_button_search_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Special" to="." method="_on_special_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Special/LangSubmenu" to="Panel/MainMenu/MarginContainer/MenuBar/Special" method="_on_lang_submenu_id_pressed"]
 [connection signal="id_pressed" from="Panel/MainMenu/MarginContainer/MenuBar/Help" to="." method="_on_help_id_pressed"]

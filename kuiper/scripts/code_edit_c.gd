@@ -1,5 +1,8 @@
 extends CodeEdit
 
+var last_search_pos_x: int = 0
+var last_search_pos_y: int = 0
+
 var changed := false
 
 var colors = {
@@ -269,3 +272,10 @@ func _ready():
 	
 	# Set line spacing for better readability
 	add_theme_constant_override("line_spacing", 6)
+	
+	
+
+
+
+	
+	

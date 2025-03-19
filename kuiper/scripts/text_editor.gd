@@ -1,8 +1,12 @@
 extends Control
 
+var last_caret_pos_x:int = 0
+var last_caret_pos_y:int = 0
+
 func _ready():
 	# Connect the file_selected signal to the method
 	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
+	set("emoji_menu_enabled", true)
 	#if !$FileDialog.is_connected("file_selected", Callable(self, "_on_file_dialog_file_selected")):
 	#	$FileDialog.connect("file_selected", Callable(self, "_on_file_dialog_file_selected"))
 
@@ -84,3 +88,36 @@ func _on_quit_about_button_pressed() -> void:
 
 func _on_about_window_close_requested() -> void:
 	$AboutWindow.visible = false
+
+
+func _on_code_edit_caret_changed() -> void:
+	var cEdit:CodeEdit = $Panel/CodeEdit
+	last_caret_pos_x = cEdit.get_caret_column()
+	last_caret_pos_y = cEdit.get_caret_line()
+	#print("Line: %d, Column: %d" % [last_caret_pos_y, last_caret_pos_x])
+
+
+# Search function :)
+func _on_button_search_pressed() -> void:
+	var lEdit = get_node("Panel/MainMenu/MarginContainer/MenuBar/LineEdit")
+	var cEdit:CodeEdit = get_node("Panel/CodeEdit")
+	var search_text = lEdit.text 
+	if search_text == "":
+		return
+	
+	# First search from the current caret pos
+	var result = cEdit.search(search_text, 0, last_caret_pos_y, last_caret_pos_x)
+	
+	# Wrap around if we don't find anything
+	if result.x == -1:
+		result = cEdit.search(search_text, 0, 0, 0)
+	
+	if result.x != -1:
+		# Select the text we've found
+		cEdit.select(result.y, result.x, result.y, result.x + search_text.length())
+		# Reset caret for next search
+		last_caret_pos_x = result.x + search_text.length()
+		last_caret_pos_y = result.y
+	else:
+		# We found nothing in our search
+		print("Text not found: ", search_text)
