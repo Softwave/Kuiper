@@ -4,8 +4,8 @@
 [ext_resource type="Theme" uid="uid://bddjgmb22q2vx" path="res://themes/RetroTheme/RetroTheme.tres" id="1_h37q1"]
 [ext_resource type="Script" path="res://scripts/text_editor.gd" id="2_otcw6"]
 [ext_resource type="Texture2D" uid="uid://dgwt7q0ivgah" path="res://themes/RetroTheme/textedit/TextBoxIdleBlack.png" id="2_ul73e"]
-[ext_resource type="Script" path="res://scripts/code_edit.gd" id="3_uewk0"]
 [ext_resource type="FontFile" uid="uid://bowouxapjhipp" path="res://themes/RetroTheme/fonts/PICO-8.ttf" id="4_5hpkv"]
+[ext_resource type="Script" path="res://scripts/code_edit_6502.gd" id="4_e6cmq"]
 [ext_resource type="Shader" path="res://shaders/crt.gdshader" id="6_t2xuk"]
 [ext_resource type="FontFile" uid="uid://jv63q3vgtlhu" path="res://themes/space-worm-theme/fonts/VT323-Regular.ttf" id="7_k5qx1"]
 [ext_resource type="FontFile" uid="uid://dr55g16lp7ag8" path="res://themes/RetroTheme/fonts/PixeloidMono.ttf" id="7_ugnit"]
@@ -108,7 +108,7 @@ offset_top = 39.0
 offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.662745, 0.647059, 0.666667, 1)
+theme_override_colors/font_color = Color(0.823529, 0.823529, 0.823529, 1)
 theme_override_colors/selection_color = Color(0.144616, 0.147214, 0.191329, 1)
 theme_override_colors/caret_color = Color(0.662745, 0.647059, 0.666667, 1)
 theme_override_constants/line_spacing = 0
@@ -225,7 +225,7 @@ code_completion_enabled = true
 indent_automatic = true
 auto_brace_completion_enabled = true
 auto_brace_completion_highlight_matching = true
-script = ExtResource("3_uewk0")
+script = ExtResource("4_e6cmq")
 
 [node name="ColorRect" type="ColorRect" parent="Panel"]
 y_sort_enabled = true
