@@ -237,6 +237,8 @@ func _ready():
 	syntax_highlighter = code_highlighter
 	code_highlighter.symbol_color = colors.punctuation
 	
+	
+
 	# Add all keywords for syntax highlighting
 	for keyword in keywords:
 		code_highlighter.add_keyword_color(keyword, keywords[keyword])
@@ -256,6 +258,8 @@ func _ready():
 	indent_use_spaces = true
 	auto_brace_completion_enabled = true
 	auto_brace_completion_highlight_matching = true
+
+	add_theme_constant_override("gutter_width", 0)
 	
 	# SpaceWorm theme 
 	add_theme_color_override("background_color", Color("#000000"))
@@ -270,8 +274,7 @@ func _ready():
 	add_theme_color_override("brace_mismatch_color", Color("#ff0000"))
 	add_theme_color_override("word_highlighted_color", Color("#3a3d41"))
 	
-	# Set line spacing for better readability
-	add_theme_constant_override("line_spacing", 6)
+
 	
 	
 
